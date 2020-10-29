@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>My family book</title>
+</head>
+
+<body>
+    <center>
+    <h1>MY FAMILY BOOK</h1>
+    <img id="members"src="https://image.freepik.com/free-vector/happy-family-cartoon-flat-style-heart-wreath_70155-125.jpg"  width="400"height="400">
+    <br>  
+    <br>  
+    <label id="name_lab">family book</label>
+    <br>
+    <br>
+    <button id="next"onclick="next()">Next</button>
+    <br>
+    <br>
+    <label id="list_members"></label>
+</center>
+</body>
+
+<script>
+    var change_img = ["https://image.freepik.com/free-vector/happy-family-cartoon-flat-style-heart-wreath_70155-125.jpg",
+    "https://classroomclipart.com/images/gallery/Clipart/Culture/indian-woman-in-saree-traditional-costume-clipart.jpg",
+    "https://cdn2.vectorstock.com/i/thumb-large/70/01/cheerful-young-man-in-casual-clothes-cartoon-style-vector-32487001.jpg",
+    "https://cdn1.vectorstock.com/i/1000x1000/83/20/girl-wearing-sari-dress-national-costume-of-india-vector-16108320.jpg",
+    "https://cdn3.vectorstock.com/i/thumb-large/93/82/happy-grandma-cartoon-vector-23629382.jpg",
+    "https://cdn4.vectorstock.com/i/thumb-large/75/38/happy-grandpa-cartoon-vector-23527538.jpg",
+    ]
+
+    var change_name = ["Family book","Sangamithra","Dharaneedharan","Varsha","Gomthi","Balasubramanium"]
+
+    i=0;
+   
+    function next(){
+        i=i+1;
+        document.getElementById("members").src = change_img[i] ; 
+        document.getElementById("name_lab").innerHTML = change_name[i] ;    
+        if (i>=5)
+        i=0;
+    }
+        var loop=""
+for (y=1;y < change_name.length;y++){
+console.log (change_name[y]);
+loop=loop+change_name[y]+"<br>";
+}
+document.getElementById("list_members").innerHTML = loop;
+    
+    
+</script>
